@@ -58,7 +58,7 @@ export class SnowflakeConnectionManager extends AbstractConnectionManager<
       }) as SnowflakeConnection;
 
       await new Promise<void>((resolve, reject) => {
-        connection.connect(err => {
+        connection.connectAsync(err => {
           if (err) {
             return void reject(err);
           }
