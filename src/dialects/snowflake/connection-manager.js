@@ -67,7 +67,7 @@ class ConnectionManager extends AbstractConnectionManager {
     try {
 
       const connection = await new Promise((resolve, reject) => {
-        this.lib.createConnection(connectionConfig).connect((err, conn) => {
+        this.lib.createConnection(connectionConfig).connectAsync((err, conn) => {
           if (err) {
             console.log(err);
             reject(err);
